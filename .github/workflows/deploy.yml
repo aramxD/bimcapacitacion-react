@@ -8,11 +8,20 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
+      
+      - name: Install and Build 🔧
+        uses: pnpm/action-setup@v2
+          with:
+            version: 6.0.2
+            run_install: |
+              - recursive: true
+                args: [--frozen-lockfile, --strict-peer-dependencies]
+              - args: [--global, gulp, prettier]
 
-      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
-        run: |
-          pnpm ci
-          pnpm run build
+      # - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
+      #   run: |
+      #     pnpm ci
+      #     pnpm run build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
