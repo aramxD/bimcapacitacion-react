@@ -1,23 +1,30 @@
-name: Build and Deploy
-on: [push]
-permissions:
-  contents: write
+name: Changesets
+on:
+  push:
+    branches:
+      - main
 jobs:
-  build-and-deploy:
+  version:
+    timeout-minutes: 15
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
+      - name: checkout code repository
         uses: actions/checkout@v3
-      
-      - name: Install and Build 🔧
-        uses: pnpm/action-setup@v2
-          version: 6.0.2
-          run_install: |
-            - recursive: true
-              args: [--frozen-lockfile, --strict-peer-dependencies]
-            - args: [--global, gulp, prettier]
-
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist # The folder the action should deploy.
+          fetch-depth: 0
+      - name: setup node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14
+      - name: install pnpm
+        run: npm i pnpm@latest -g
+      - name: install dependencies
+        run: pnpm install
+      - name: create and publish versions
+        uses: changesets/action@v1
+        with:
+          version: pnpm ci:version
+          commit: "chore: update versions"
+          title: "chore: update versions"
+          publish: pnpm ci:publish
+        
