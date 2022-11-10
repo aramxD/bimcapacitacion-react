@@ -1,22 +1,24 @@
- import Footer from "./components/Footer"
+import styled from "styled-components"
+import CourseInfo from "./components/CourseInfo"
+import Footer from "./components/Footer"
 import NavBar from "./components/NavBar"
-import RegistrationForm from "./components/RegistrationForm"
-import TileGallery from './components/TileGallery'
+import RegistrationForm from "./elements/RegistrationForm"
+import TileGallery from './elements/TileGallery'
  
 
 function App() {
   
 
   return (
-    <div className="App">
+    <>
       <NavBar/>
-      {/* <TileGallery/> */}
-      <RegistrationForm/>
-
+      
+      {/* <RegistrationForm/> */}
+      <CourseInfo/>
 
       <Footer/>
-    </div>
+    </>
   )
 }
 
-export default App
+export default styled(App)``
