@@ -46,15 +46,15 @@ const Footer = ({ className }) => {
 export default styled(Footer)`
   display:flex;
   align-items: center;
-  position: fixed;
+  position: sticky;
 
   left: 0;
   bottom: 0;
   width: 100%;
   height:80px;
   box-shadow: rgb(149 157 165 / 20%) 10px 8px 14px 12px;
-  /* background-color: #aaaaaa; */
-  
+  background-color: #ffffff;
+  z-index:3000;
 
 .social-media {
     display: flex;
@@ -84,5 +84,11 @@ export default styled(Footer)`
   .social-media-icon i {
     font-size: 30px;
     line-height: 60px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .social-media{
+      width: 100%;
+    }
   }
 `;

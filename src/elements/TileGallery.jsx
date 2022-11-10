@@ -2,8 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 import InstElectrica from "../assets/img/IElectrical.jpg";
+import IconElectric from "../assets/img/electrical-icon-16.png";
 import InstHS from "../assets/img/IsometricoHS.jpg";
+import IconHS from "../assets/img/pipe-icon.png";
 import InstMech from "../assets/img/IsometricoMECH.jpg";
+import IconMech from "../assets/img/hvac-icon.png";
 
 const TileGallery = ({ className }) => {
   return (
@@ -11,12 +14,23 @@ const TileGallery = ({ className }) => {
       <div id="gallery">
         <div className="tile">
           <img src={InstElectrica} alt="" />
+          <div className="icon">
+            <img src={IconElectric} alt="" />
+          </div>
         </div>
+
         <div className="tile">
           <img src={InstHS} alt="" />
+          <div className="icon">
+            <img src={IconHS} alt="" />
+          </div>
         </div>
+
         <div className="tile">
           <img src={InstMech} alt="" />
+          <div className="icon">
+            <img src={IconMech} alt="" />
+          </div>
         </div>
         {/* <div className="tile">
           <img
@@ -44,10 +58,21 @@ export default styled(TileGallery)`
   /* width:100%; */
   margin: 0 auto;
   /* border: 3px solid black; */
-
+  .icon {
+    height: 80%;
+    position:relative;
+    bottom:90%
+  }
+  .icon > img {
+    height: 100%;
+    z-index:1000;
+  }
+  .icon:hover {
+    opacity: 0;
+  }
   #gallery {
     height: inherit;
-    width: 50%;
+    width: 60%;
     position: absolute;
   }
   .tile {
@@ -97,7 +122,7 @@ export default styled(TileGallery)`
     left: 15%;
     top: 72%;
   }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 600px) {
     flex-direction: column-reverse;
     #gallery {
       height: inherit;
