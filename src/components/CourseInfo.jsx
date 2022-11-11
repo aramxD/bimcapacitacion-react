@@ -29,7 +29,7 @@ const CourseInfo = ({ className }) => {
           <li>Cuantificaciones de obra</li>
           <li>Preparacion de planos</li>
         </div>
-        <button>Registrarse</button>
+        <button >Registrarse</button>
       </div>
       
       
@@ -69,6 +69,17 @@ export default styled(CourseInfo)`
     color:white;
     border:none;
     border-radius:10px;
+    box-shadow: 0 9px #999;
+  }
+  button:hover{
+    background: #a32424;
+  } 
+  button:focus, button:active {
+    transform:translateY(6px);
+    background: #a32424;
+     
+  box-shadow: 0 5px #666;
+   
   }
   .Course {
     display: flex;
@@ -92,6 +103,7 @@ export default styled(CourseInfo)`
   .Gallery {
     width: 55%;
   }
+  
   @media screen and (max-width: 900px) {
      
 

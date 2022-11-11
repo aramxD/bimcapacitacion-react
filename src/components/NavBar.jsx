@@ -9,10 +9,10 @@ const NavBar = ({ className }) => {
         <img src={Logo} alt="" />
       </div>
       <div className="enlacesHeader">
-        <a href="#">Registra</a>
+        {/* <a href="#">Registra</a> */}
         <a href="https://BIMCapacitacion.com">Inicio</a>
-        <a href="#">Tutoriales</a>
-        <a href="#">Contacto</a>
+        {/* <a href="#">Tutoriales</a>
+        <a href="#">Contacto</a> */}
       </div>
     </nav>
   );
@@ -30,7 +30,7 @@ export default styled(NavBar)`
     height: 100%;
   }
   .enlacesHeader {
-    width: 40%;
+    width: 10%;
     display: flex;
     justify-content: space-around;
     align-items: center;

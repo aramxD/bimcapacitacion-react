@@ -59,9 +59,9 @@ export default styled(TileGallery)`
   margin: 0 auto;
   /* border: 3px solid black; */
   .icon {
-    height: 80%;
+    height: 30%;
     position:relative;
-    bottom:90%
+    bottom:70%
   }
   .icon > img {
     height: 100%;
