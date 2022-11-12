@@ -19,7 +19,7 @@ const NavBar = ({ className }) => {
 };
 
 export default styled(NavBar)`
-  height: 80px;
+  height: 60px;
   width: 100%;
   display: flex;
   justify-content: space-between;

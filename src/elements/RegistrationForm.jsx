@@ -44,7 +44,7 @@ export default styled(RegistrationForm)`
 display:flex;
 flex-direction:column;
 align-items:center;
-width:100vw;
+
 margin:20px auto;
 .formTitle{
     text-align:center;

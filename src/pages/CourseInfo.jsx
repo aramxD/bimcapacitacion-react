@@ -1,10 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import Modal from "../components/Modal";
 import TileGallery from "../elements/TileGallery";
+import RegistrationForm from '../elements/RegistrationForm'
 
 const CourseInfo = ({ className }) => {
   return (
     <section className={className}>
+      
       <div className="Gallery">
         <TileGallery />
       </div>
@@ -12,13 +15,15 @@ const CourseInfo = ({ className }) => {
         <div className="CourseInfo">
           <h1>Curso Revit MEP</h1>
 
-          <h3>Horario 🕐</h3>
-          <p>9am - 2pm</p>
 
           <h3>Fechas 📆</h3>
           <p>🟢 Domingo 4 Diciembre 2022</p>
           <p>🟢 Sabado 10 Diciembre 2022</p>
           <p>🟢 Domingo 12 Diciembre 2022</p>
+          <h3>Horario 🕐</h3>
+          <p>9am - 2pm</p>
+          <h3>Ubicacion</h3>
+          <p>Coworking Aurora</p>
         </div>
         <div className="courseData">
           <h3>Contenido</h3>
@@ -29,9 +34,11 @@ const CourseInfo = ({ className }) => {
           <li>Cuantificaciones de obra</li>
           <li>Preparacion de planos</li>
         </div>
-        <button >Registrarse</button>
+        <button id="registrar">Registrarse</button>
       </div>
-      
+      <Modal title={'Registrate al Curso Revit MEP'}>
+        <RegistrationForm/>
+      </Modal>
       
     </section>
   );
@@ -42,45 +49,25 @@ export default styled(CourseInfo)`
   flex-direction: row-reverse;
   align-items: center;
   width: 100vw;
-  margin: 0 0 30px 0;
+  margin: 20px 0 30px 0;
   z-index:1000;
   h1 {
     font-size:30px;
     margin: 0 0 20px 0;
   }
-  h2 {
-    font-size:26px;
-    margin: 20px 0 0 0;
-  }
+ 
   h3 {
-    margin: 24px 0 0 0;
+    font-size:24px;
+    margin: 18px 0 0 0;
     border-bottom:2px solid black;
   }
   p {
-    font-size: 18px;
+    font-size: 16px;
     margin: 5px 0;
   }
-  button{
-    margin:20px 0;
-    padding:10px 15px;
-    width:100%;
-    font-size:24px;
-    background: #ce2c2c;
-    color:white;
-    border:none;
-    border-radius:10px;
-    box-shadow: 0 9px #999;
-  }
-  button:hover{
-    background: #a32424;
-  } 
-  button:focus, button:active {
-    transform:translateY(6px);
-    background: #a32424;
-     
-  box-shadow: 0 5px #666;
-   
-  }
+  
+
+  
   .Course {
     display: flex;
     flex-direction: column;
@@ -99,6 +86,28 @@ export default styled(CourseInfo)`
   .courseData {
     width: 70%;
     margin: 0 30px;
+  }
+  /* BoTON */
+  #registrar {
+    margin:20px 0;
+    padding:10px 15px;
+    width:100%;
+    font-size:24px;
+    background: #ce2c2c;
+    color:white;
+    border:none;
+    border-radius:10px;
+    box-shadow: 0 9px #999;
+  }
+  #registrar:hover{
+    background: #a32424;
+  } 
+  #registrar:focus, #registrar:active {
+    transform:translateY(6px);
+    background: #a32424;
+     
+  box-shadow: 0 5px #666;
+   
   }
   .Gallery {
     width: 55%;

@@ -51,10 +51,10 @@ export default styled(Footer)`
   left: 0;
   bottom: 0;
   width: 100%;
-  height:80px;
+  height:60px;
   box-shadow: rgb(149 157 165 / 20%) 10px 8px 14px 12px;
   background-color: #ffffff;
-  z-index:3000;
+  z-index:5;
 
 .social-media {
     display: flex;
@@ -67,8 +67,8 @@ export default styled(Footer)`
 
   .social-media-icon {
     display: inline-block;
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     border: 1px solid rgb(0, 0, 0);
     border-radius: 50%;
     text-align: center;
@@ -82,8 +82,8 @@ export default styled(Footer)`
   }
 
   .social-media-icon i {
-    font-size: 30px;
-    line-height: 60px;
+    font-size: 20px;
+    line-height: 25px;
   }
 
   @media screen and (max-width: 600px) {
