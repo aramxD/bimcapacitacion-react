@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Modal from "../components/Modal";
 import TileGallery from "../elements/TileGallery";
 import RegistrationForm from '../elements/RegistrationForm'
 
 const CourseInfo = ({ className }) => {
+  const [showModal, setShowModal] = useState(false)
+
+
   return (
     <section className={className}>
       
@@ -34,9 +37,9 @@ const CourseInfo = ({ className }) => {
           <li>Cuantificaciones de obra</li>
           <li>Preparacion de planos</li>
         </div>
-        <button id="registrar">Registrarse</button>
+        <button id="registrar" onClick={()=>setShowModal(!showModal)}>Registrarse</button>
       </div>
-      <Modal title={'Registrate al Curso Revit MEP'}>
+      <Modal title={'Registrate al Curso Revit MEP'} showModal={showModal} setShowModal={setShowModal}>
         <RegistrationForm/>
       </Modal>
       
