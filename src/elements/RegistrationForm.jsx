@@ -1,26 +1,79 @@
-import React from "react";
+import React, {useRef } from "react";
 import styled from "styled-components";
 
 const RegistrationForm = ({ className }) => {
+const nameRef = useRef()
+const emailRef = useRef()
+const phoneRef = useRef()
+
+
+const submitHandler =(event)=>{
+  event.preventDefault()
+  const data = {
+    "nombre": nameRef.current.value,
+    "email": emailRef.current.value,
+    "telefono": phoneRef.current.value,
+    "evento": "Curso Revit MEP"
+}
+
+// var formdata = new FormData();
+// formdata.append("nombre", "test");
+// formdata.append("email", "test@test.com");
+// formdata.append("telefono", "6643563487");
+// formdata.append("evento", "Curso Revit MEP");
+
+var requestOptions = {
+  method: 'POST',
+  body: data,
+  redirect: 'follow'
+};
+
+fetch("https://p01--restapi--qzvdk8qp7kvm.code.run/api/v1/bimc/registration", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+
+
+   
+}
+
   return (
     <section className={className}>
       <div className="formContent">
-        <form action="">
+        <form onSubmit={submitHandler}>
           <div className="formInput">
-            <label htmlFor="">Nombre:</label>
-            <input type="text" />
+            <label htmlFor="name">Nombre Completo:</label>
+            <input 
+            id="name"
+            type="text"
+            required
+            placeholder="Nombre - Apeido"
+            ref={nameRef}
+             />
           </div>
-          <div className="formInput">
+          {/* <div className="formInput">
             <label htmlFor="">Apeido:</label>
             <input type="text" />
+          </div> */}
+          <div className="formInput">
+            <label htmlFor="email">Email:</label>
+            <input 
+            id="email"
+            type="email"
+            required
+            placeholder="Correo electronico"
+            ref={emailRef} />
           </div>
           <div className="formInput">
-            <label htmlFor="">Email:</label>
-            <input type="email" />
-          </div>
-          <div className="formInput">
-            <label htmlFor="">Tel.:</label>
-            <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+            <label htmlFor="phone">Tel.:</label>
+            <input 
+            id="phone"
+            type="tel" 
+            
+            required
+            placeholder="Numero de contacto"
+            ref={phoneRef}
+            pattern="[0-9]{3}[0-9]{3}[0-9]{4}" />
           </div>
           <button>Registrar</button>
         </form>
