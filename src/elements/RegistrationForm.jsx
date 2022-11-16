@@ -1,79 +1,71 @@
-import React, {useRef } from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
+import { useFetchPost } from "../hooks/useFetch";
 
 const RegistrationForm = ({ className }) => {
-const nameRef = useRef()
-const emailRef = useRef()
-const phoneRef = useRef()
+  const nameRef = useRef();
+  const lastNameRef = useRef();
+  const emailRef = useRef();
+  const phoneRef = useRef();
 
+  const submitHandler = (event) => {
+    event.preventDefault();
+    const data = {
+      nombre: nameRef.current.value,
+      apeido: lastNameRef.current.value,
+      email: emailRef.current.value,
+      telefono: phoneRef.current.value,
+      evento: "Curso Revit MEP",
+    };
 
-const submitHandler =(event)=>{
-  event.preventDefault()
-  const data = {
-    "nombre": nameRef.current.value,
-    "email": emailRef.current.value,
-    "telefono": phoneRef.current.value,
-    "evento": "Curso Revit MEP"
-}
-
-// var formdata = new FormData();
-// formdata.append("nombre", "test");
-// formdata.append("email", "test@test.com");
-// formdata.append("telefono", "6643563487");
-// formdata.append("evento", "Curso Revit MEP");
-
-var requestOptions = {
-  method: 'POST',
-  body: data,
-  redirect: 'follow'
-};
-
-fetch("https://p01--restapi--qzvdk8qp7kvm.code.run/api/v1/bimc/registration", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
-
-
-   
-}
+    const url ="https://p01--restapi--qzvdk8qp7kvm.code.run/bimcapacitacion/api/v1/registration";
+    useFetchPost(url, data);
+  };
 
   return (
     <section className={className}>
       <div className="formContent">
         <form onSubmit={submitHandler}>
           <div className="formInput">
-            <label htmlFor="name">Nombre Completo:</label>
-            <input 
-            id="name"
-            type="text"
-            required
-            placeholder="Nombre - Apeido"
-            ref={nameRef}
-             />
+            <label htmlFor="name">Nombre:</label>
+            <input
+              id="name"
+              type="text"
+              required
+              placeholder="Nombre"
+              ref={nameRef}
+            />
           </div>
-          {/* <div className="formInput">
-            <label htmlFor="">Apeido:</label>
-            <input type="text" />
-          </div> */}
+          <div className="formInput">
+            <label htmlFor="lastName">Apeido:</label>
+            <input
+              id="lastName"
+              type="text"
+              required
+              placeholder="Apeido"
+              ref={lastNameRef}
+            />
+          </div>
           <div className="formInput">
             <label htmlFor="email">Email:</label>
-            <input 
-            id="email"
-            type="email"
-            required
-            placeholder="Correo electronico"
-            ref={emailRef} />
+            <input
+              id="email"
+              type="email"
+              required
+              placeholder="Correo electronico"
+              ref={emailRef}
+            />
           </div>
           <div className="formInput">
             <label htmlFor="phone">Tel.:</label>
-            <input 
-            id="phone"
-            type="tel" 
-            
-            required
-            placeholder="Numero de contacto"
-            ref={phoneRef}
-            pattern="[0-9]{3}[0-9]{3}[0-9]{4}" />
+            <input
+              id="phone"
+              type="tel"
+              required
+              placeholder="Numero de contacto"
+              ref={phoneRef}
+              pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+            />
           </div>
           <button>Registrar</button>
         </form>
