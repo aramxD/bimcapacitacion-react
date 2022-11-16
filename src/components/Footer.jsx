@@ -31,13 +31,7 @@ const Footer = ({ className }) => {
         >
           <i className="bx bxl-instagram"></i>
         </a>
-        <a
-          href="https://www.wa.link/mqz551"
-          target="_blank"
-          className="social-media-icon"
-        >
-          <i className="bx bxl-whatsapp"></i>
-        </a>
+        
       </div>
     </footer>
   );
