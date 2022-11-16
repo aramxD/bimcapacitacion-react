@@ -10,13 +10,13 @@ const RegistrationForm = ({ className }) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    const data = {
+    const data = JSON.stringify({
       nombre: nameRef.current.value,
       apeido: lastNameRef.current.value,
       email: emailRef.current.value,
       telefono: phoneRef.current.value,
       evento: "Curso Revit MEP",
-    };
+    });
 
     const url ="https://p01--restapi--qzvdk8qp7kvm.code.run/bimcapacitacion/api/v1/registration";
     useFetchPost(url, data);

@@ -6,6 +6,7 @@ specifiers:
   '@vitejs/plugin-react': ^2.2.0
   react: ^18.2.0
   react-dom: ^18.2.0
+  react-floating-whatsapp: ^5.0.6
   react-is: '>= 16.8.0'
   styled-components: ^5.3.6
   vite: ^3.2.3
@@ -13,6 +14,7 @@ specifiers:
 dependencies:
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-floating-whatsapp: 5.0.6_biqbaboplfbrettd7655fr4n2y
   react-is: 16.13.1
   styled-components: 5.3.6_vtcxgy2wlmese7djxl6h7ok674
 
@@ -854,6 +856,17 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+    dev: false
+
+  /react-floating-whatsapp/5.0.6_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-tmiO1mWUGYo0xyUA3ZjuU/k6uRWHzvDxXDUInhjE0T2bQNN2wJKHxvRWZPFT1Vk1bGyl/ZDwyJPxWItC1Mz4UA==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      react: '>=18.0.0'
+      react-dom: '>=18.0.0'
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /react-is/16.13.1:
