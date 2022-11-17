@@ -137,7 +137,7 @@ Error generating stack: `+l.message+`
   img {
     width: 100%;
   }
-`,v0="/bimcapacitacion-react/assets/IElectrical.366f2bb6.jpg",y0="/bimcapacitacion-react/assets/electrical-icon-16.03710ca3.png",w0="/bimcapacitacion-react/assets/IsometricoHS.27a4471d.jpg",x0="/bimcapacitacion-react/assets/pipe-icon.4fb95164.png",S0="/bimcapacitacion-react/assets/IsometricoMECH.8c14e223.jpg",E0="/bimcapacitacion-react/assets/hvac-icon.b7e6133a.png",I0=({className:e})=>k("section",{className:` ${e}`,children:fe("div",{id:"gallery",children:[fe("div",{className:"tile",children:[k("img",{src:v0,alt:""}),k("div",{className:"icon",children:k("img",{src:y0,alt:""})})]}),fe("div",{className:"tile",children:[k("img",{src:w0,alt:""}),k("div",{className:"icon",children:k("img",{src:x0,alt:""})})]}),fe("div",{className:"tile",children:[k("img",{src:S0,alt:""}),k("div",{className:"icon",children:k("img",{src:E0,alt:""})})]})]})}),C0=lt(I0)`
+`,v0="/assets/IElectrical.366f2bb6.jpg",y0="/assets/electrical-icon-16.03710ca3.png",w0="/assets/IsometricoHS.27a4471d.jpg",x0="/assets/pipe-icon.4fb95164.png",S0="/assets/IsometricoMECH.8c14e223.jpg",E0="/assets/hvac-icon.b7e6133a.png",I0=({className:e})=>k("section",{className:` ${e}`,children:fe("div",{id:"gallery",children:[fe("div",{className:"tile",children:[k("img",{src:v0,alt:""}),k("div",{className:"icon",children:k("img",{src:y0,alt:""})})]}),fe("div",{className:"tile",children:[k("img",{src:w0,alt:""}),k("div",{className:"icon",children:k("img",{src:x0,alt:""})})]}),fe("div",{className:"tile",children:[k("img",{src:S0,alt:""}),k("div",{className:"icon",children:k("img",{src:E0,alt:""})})]})]})}),C0=lt(I0)`
   display: flex;
   justify-content: center;
   align-content: center;
@@ -398,7 +398,7 @@ Error generating stack: `+l.message+`
       width: 100%;
     }
   }
-`,Mf="/bimcapacitacion-react/assets/Logo-BIM-Capacitacion.ebc65f07.png",T0=({className:e})=>fe("nav",{className:e,children:[k("div",{className:"logo",children:k("img",{src:Mf,alt:""})}),k("div",{className:"enlacesHeader",children:k("a",{href:"https://BIMCapacitacion.com",children:"Inicio"})})]}),H0=lt(T0)`
+`,Mf="/assets/Logo-BIM-Capacitacion.ebc65f07.png",T0=({className:e})=>fe("nav",{className:e,children:[k("div",{className:"logo",children:k("img",{src:Mf,alt:""})}),k("div",{className:"enlacesHeader",children:k("a",{href:"https://BIMCapacitacion.com",children:"Inicio"})})]}),H0=lt(T0)`
   height: 60px;
   width: 100%;
   display: flex;
