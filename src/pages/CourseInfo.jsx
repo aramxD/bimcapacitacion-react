@@ -4,7 +4,7 @@ import Modal from "../components/Modal";
 import TileGallery from "../elements/TileGallery";
 import RegistrationForm from '../elements/RegistrationForm'
 
-const CourseInfo = ({ className }) => {
+const CourseInfo = ({ className, setAlert }) => {
   const [showModal, setShowModal] = useState(false)
 
 
@@ -39,8 +39,12 @@ const CourseInfo = ({ className }) => {
         </div>
         <button id="registrar" onClick={()=>setShowModal(!showModal)}>Registrarse</button>
       </div>
-      <Modal title={'Registrate al Curso Revit MEP'} showModal={showModal} setShowModal={setShowModal}>
-        <RegistrationForm/>
+      <Modal 
+        title={'Registro Curso Revit MEP'} 
+        showModal={showModal} 
+        setShowModal={setShowModal} 
+        >
+        <RegistrationForm setShowModal={setShowModal} setAlert={setAlert}/>
       </Modal>
       
     </section>

@@ -45,7 +45,8 @@ const Overlay = styled.div`
 `;
 
 const ModalContainer = styled.div`
-  width: 80%;
+  max-width: 80%;
+  min-width:400px;
   max-height: 80%;
   min-height: 200px;
   background: #fff;
@@ -54,13 +55,17 @@ const ModalContainer = styled.div`
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   padding: 20px;
   overflow-y: auto;
+  @media screen and (max-width: 600px) {
+    min-width:300px;
+  } 
 `;
 
 const ModalTitle = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  width:80%;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
   border-bottom: 1px solid #e8e8e8;
    h2 {
     font-weight: 500;
@@ -69,7 +74,7 @@ const ModalTitle = styled.div`
   @media screen and (max-width: 600px) {
     h2 {
     font-weight: 500;
-    font-size: 20px;
+    font-size: 18px;
   } 
   }
 `;
