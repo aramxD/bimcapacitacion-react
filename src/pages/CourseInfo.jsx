@@ -26,7 +26,7 @@ const CourseInfo = ({ className, setAlert }) => {
           <h3>Horario 🕐</h3>
           <p>9am - 2pm</p>
           <h3>Ubicacion</h3>
-          <p>Coworking Aurora</p>
+          <a href="https://goo.gl/maps/tqV86YxQThDzxPHv8" target="_blank">Coworking Aurora</a>
         </div>
         <div className="courseData">
           <h3>Contenido</h3>
@@ -39,6 +39,7 @@ const CourseInfo = ({ className, setAlert }) => {
         </div>
         <button id="registrar" onClick={()=>setShowModal(!showModal)}>Registrarse</button>
       </div>
+      
       <Modal 
         title={'Registro Curso Revit MEP'} 
         showModal={showModal} 
