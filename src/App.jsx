@@ -8,6 +8,7 @@ import {FloatingWhatsApp} from 'react-floating-whatsapp';
 
 //whattsApp Config
 import whattsappAvatar from "./assets/img/Logo-BIM-Capacitacion.png";
+import Hero from "./components/Hero";
 const phoneNumber = "526642171518";
 const accountName = "BIMCapacitacion";
 const statusMessage = "Tiempo de respuesta: 15 min.";
@@ -20,6 +21,7 @@ function App() {
   return (
     <>
       <NavBar />
+      <Hero/> 
       <Alert  alert={alert} setAlert={setAlert} handleClose={toogleClose}/>
       <CourseInfo setAlert={setAlert}/>
       <FloatingWhatsApp
