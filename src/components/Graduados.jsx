@@ -17,15 +17,15 @@ import grupo3 from "../assets/img/FotosGraduados/20248501_2044695105760339_80866
 import grupo4 from "../assets/img/FotosGraduados/21949959_2074746899421826_3050276903446186772_o.jpg";
 import grupo5 from "../assets/img/FotosGraduados/27067293_2133070823589433_364944430914976481_n.jpg";
 import grupo6 from "../assets/img/FotosGraduados/29542862_2161179670778548_8433403115855577007_n.jpg";
-import grupo7 from "../assets/img/FotosGraduados/DSC_0234-min.jpg";
-import grupo8 from "../assets/img/FotosGraduados/DSC_0247-min.jpg";
-import grupo9 from "../assets/img/FotosGraduados/DSC_0268-min.jpg";
-import grupo10 from "../assets/img/FotosGraduados/DSC_0657-min.jpg";
-import grupo12 from "../assets/img/FotosGraduados/DSC_0765-min.jpg";
-import grupo13 from "../assets/img/FotosGraduados/DSC_1064-min.jpg";
-import grupo14 from "../assets/img/FotosGraduados/DSC_1249-min.jpg";
-import grupo15 from "../assets/img/FotosGraduados/DSC_1350-min.jpg";
-import grupo16 from "../assets/img/FotosGraduados/IMG_20220826_180101-min.jpg";
+import grupo7 from "../assets/img/FotosGraduados/DSC_0234.jpg"; 
+import grupo8 from "../assets/img/FotosGraduados/DSC_0247.jpg";
+import grupo9 from "../assets/img/FotosGraduados/DSC_0268.jpg";
+import grupo10 from "../assets/img/FotosGraduados/DSC_0657.jpg";
+import grupo12 from "../assets/img/FotosGraduados/DSC_0765.jpg";
+import grupo13 from "../assets/img/FotosGraduados/DSC_1064.jpg";
+import grupo14 from "../assets/img/FotosGraduados/DSC_1249.jpg";
+import grupo15 from "../assets/img/FotosGraduados/DSC_1350.jpg";
+import grupo16 from "../assets/img/FotosGraduados/IMG_20220826_180101.jpg";
 import grupo17 from "../assets/img/FotosGraduados/WhatsApp Image 2022-11-23 at 11.42.54 AM.jpeg";
 
 const fotosGrupo = [
