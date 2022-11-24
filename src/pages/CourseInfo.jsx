@@ -16,7 +16,7 @@ const CourseInfo = ({ className, setAlert }) => {
       </div>
       <div className="Course">
         <div className="CourseInfo">
-          <h1>Curso Revit MEP</h1>
+          <h2>Detalles del Curso</h2>
 
 
           <h3>Fechas 📆</h3>
@@ -59,7 +59,7 @@ export default styled(CourseInfo)`
   width: 100vw;
   margin: 20px 0 30px 0;
   z-index:1000;
-  h1 {
+  h2 {
     font-size:30px;
     margin: 0 0 20px 0;
   }

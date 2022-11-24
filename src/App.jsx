@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 import Alert from "./elements/Alert";
 import useAlert from "./hooks/useAlert";
+import Graduados from "./components/Graduados";
 import {FloatingWhatsApp} from 'react-floating-whatsapp';
 
 //whattsApp Config
@@ -22,6 +23,7 @@ function App() {
     <>
       <NavBar />
       <Hero/> 
+      <Graduados/>
       <Alert  alert={alert} setAlert={setAlert} handleClose={toogleClose}/>
       <CourseInfo setAlert={setAlert}/>
       <FloatingWhatsApp
